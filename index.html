@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación de Privacidad de Datos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Evaluación de Privacidad de Datos</h1>
+    </header>
+
+    <main>
+        <!-- Sección de autenticación -->
+        <section id="auth-section">
+            <h2>Iniciar Sesión</h2>
+            <form id="form-login">
+                <label for="email-login">Correo Electrónico:</label>
+                <input type="email" id="email-login" placeholder="Ingresa tu correo" required>
+                <label for="password-login">Contraseña:</label>
+                <input type="password" id="password-login" placeholder="Ingresa tu contraseña" required>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+            <button id="register-btn">¿No tienes cuenta? Regístrate aquí</button>
+        </section>
+
+        <!-- Sección de registro -->
+        <section id="register-section" style="display: none;">
+            <h2>Registrarse</h2>
+            <form id="form-register">
+                <label for="email-register">Correo Electrónico:</label>
+                <input type="email" id="email-register" placeholder="Ingresa tu correo" required>
+                <label for="password-register">Contraseña:</label>
+                <input type="password" id="password-register" placeholder="Ingresa tu contraseña" required>
+                <button type="submit">Registrarse</button>
+            </form>
+            <button id="login-btn">¿Ya tienes cuenta? Inicia sesión aquí</button>
+        </section>
+
+        <!-- Sección del cuestionario -->
+        <section id="cuestionario-section" style="display: none;">
+            <h2>Cuestionario</h2>
+            <form id="form-cuestionario">
+                <!-- Preguntas del cuestionario -->
+                <!-- Pregunta 1 -->
+                <div class="pregunta">
+                    <p>1. ¿Tiene su empresa procesos claros para obtener el consentimiento de los individuos?</p>
+                    <label><input type="radio" name="pregunta1" value="1"> No tenemos procesos</label><br>
+                    <label><input type="radio" name="pregunta1" value="2"> Procesos limitados</label><br>
+                    <label><input type="radio" name="pregunta1" value="3"> Procesos claros</label><br>
+                    <label><input type="radio" name="pregunta1" value="4"> Procesos integrados y revisados</label>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="pregunta">
+                    <p>2. ¿Recolecta su empresa solo los datos necesarios para fines específicos?</p>
+                    <label><input type="radio" name="pregunta2" value="1"> Recolectamos más datos de los necesarios</label><br>
+                    <label><input type="radio" name="pregunta2" value="2"> Intentamos limitar la recolección</label><br>
+                    <label><input type="radio" name="pregunta2" value="3"> Solo recolectamos los datos necesarios</label><br>
+                    <label><input type="radio" name="pregunta2" value="4"> Revisamos regularmente los datos recolectados</label>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="pregunta">
+                    <p>3. ¿Define y comunica su empresa los propósitos de recolección de datos?</p>
+                    <label><input type="radio" name="pregunta3" value="1"> No definimos ni comunicamos el propósito</label><br>
+                    <label><input type="radio" name="pregunta3" value="2"> Definimos el propósito, pero no lo comunicamos</label><br>
+                    <label><input type="radio" name="pregunta3" value="3"> Definimos y comunicamos claramente el propósito</label><br>
+                    <label><input type="radio" name="pregunta3" value="4"> Revisamos y actualizamos los propósitos regularmente</label>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="pregunta">
+                    <p>4. ¿Limita su empresa el uso de los datos a los fines establecidos?</p>
+                    <label><input type="radio" name="pregunta4" value="1"> No limitamos el uso de los datos</label><br>
+                    <label><input type="radio" name="pregunta4" value="2"> Intentamos limitar el uso</label><br>
+                    <label><input type="radio" name="pregunta4" value="3"> Limitamos el uso según las políticas</label><br>
+                    <label><input type="radio" name="pregunta4" value="4"> Revisamos continuamente el uso de los datos</label>
+                </div>
+
+                <!-- Pregunta 5 -->
+                <div class="pregunta">
+                    <p>5. ¿Garantiza su empresa que los datos sean precisos y actualizados?</p>
+                    <label><input type="radio" name="pregunta5" value="1"> No tenemos controles para la precisión</label><br>
+                    <label><input type="radio" name="pregunta5" value="2"> Verificamos ocasionalmente la precisión</label><br>
+                    <label><input type="radio" name="pregunta5" value="3"> Tenemos procesos de verificación regulares</label><br>
+                    <label><input type="radio" name="pregunta5" value="4"> Usamos procesos automatizados para asegurar la precisión</label>
+                </div>
+
+                <!-- Pregunta 6 -->
+                <div class="pregunta">
+                    <p>6. ¿Implementa su empresa medidas de seguridad adecuadas para proteger los datos?</p>
+                    <label><input type="radio" name="pregunta6" value="1"> No tenemos medidas de seguridad específicas</label><br>
+                    <label><input type="radio" name="pregunta6" value="2"> Tenemos medidas básicas</label><br>
+                    <label><input type="radio" name="pregunta6" value="3"> Implementamos medidas de seguridad robustas</label><br>
+                    <label><input type="radio" name="pregunta6" value="4"> Revisamos y mejoramos continuamente nuestras medidas</label>
+                </div>
+
+                <!-- Pregunta 7 -->
+                <div class="pregunta">
+                    <p>7. ¿Informa su empresa a los individuos sobre cómo se recolectan y usan sus datos?</p>
+                    <label><input type="radio" name="pregunta7" value="1"> No informamos a los individuos</label><br>
+                    <label><input type="radio" name="pregunta7" value="2"> Informamos parcialmente</label><br>
+                    <label><input type="radio" name="pregunta7" value="3"> Informamos claramente a los individuos</label><br>
+                    <label><input type="radio" name="pregunta7" value="4"> Revisamos y actualizamos las políticas de transparencia</label>
+                </div>
+
+                <!-- Pregunta 8 -->
+                <div class="pregunta">
+                    <p>8. ¿Permite su empresa a los individuos acceder y rectificar sus datos?</p>
+                    <label><input type="radio" name="pregunta8" value="1"> No permitimos acceso ni rectificación</label><br>
+                    <label><input type="radio" name="pregunta8" value="2"> Permitimos acceso, pero es complicado</label><br>
+                    <label><input type="radio" name="pregunta8" value="3"> Ofrecemos acceso y rectificación fácil</label><br>
+                    <label><input type="radio" name="pregunta8" value="4"> Optimizamos continuamente el acceso a los datos</label>
+                </div>
+
+                <!-- Pregunta 9 -->
+                <div class="pregunta">
+                    <p>9. ¿Asume su empresa la responsabilidad de cumplir con las políticas de privacidad?</p>
+                    <label><input type="radio" name="pregunta9" value="1"> No asumimos responsabilidad formal</label><br>
+                    <label><input type="radio" name="pregunta9" value="2"> Tenemos responsabilidad limitada</label><br>
+                    <label><input type="radio" name="pregunta9" value="3"> Asumimos plena responsabilidad</label><br>
+                    <label><input type="radio" name="pregunta9" value="4"> Monitoreamos continuamente el cumplimiento</label>
+                </div>
+
+                <!-- Pregunta 10 -->
+                <div class="pregunta">
+                    <p>10. ¿Revisa su empresa regularmente el cumplimiento de los principios de privacidad?</p>
+                    <label><input type="radio" name="pregunta10" value="1"> No hacemos revisiones periódicas</label><br>
+                    <label><input type="radio" name="pregunta10" value="2"> Realizamos revisiones ocasionales</label><br>
+                    <label><input type="radio" name="pregunta10" value="3"> Hacemos revisiones periódicas</label><br>
+                    <label><input type="radio" name="pregunta10" value="4"> Revisamos continuamente para mejorar</label>
+                </div>
+
+                <!-- Pregunta 11 -->
+                <div class="pregunta">
+                    <p>11. ¿Tiene su empresa un procedimiento para notificar sobre violaciones de datos?</p>
+                    <label><input type="radio" name="pregunta11" value="1"> No tenemos un procedimiento establecido</label><br>
+                    <label><input type="radio" name="pregunta11" value="2"> Tenemos procedimientos básicos</label><br>
+                    <label><input type="radio" name="pregunta11" value="3"> Tenemos procedimientos documentados</label><br>
+                    <label><input type="radio" name="pregunta11" value="4"> Revisamos y mejoramos continuamente nuestros procedimientos</label>
+                </div>
+
+                <!-- Botón de envío -->
+                <button type="submit">Enviar Cuestionario</button>
+            </form>
+            <button id="reiniciar-cuestionario" style="display: none;">Volver a realizar el cuestionario</button>
+        </section>
+
+        <!-- Sección de resultados -->
+        <section id="resultados-section" style="display: none;">
+            <h2>Resultados</h2>
+            <p id="nivel-madurez"></p>
+            <p id="recomendaciones"></p>
+            <h3>Puntos Fuertes</h3>
+            <p id="puntos-fuertes"></p>
+            <h3>Áreas de Mejora</h3>
+            <p id="puntos-debiles"></p>
+        </section>
+
+        <!-- Historial de reportes -->
+        <section id="historial-section" style="display: none;">
+            <h2>Historial de Reportes</h2>
+            <ul id="report-list"></ul>
+        </section>
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
